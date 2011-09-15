@@ -89,7 +89,7 @@ def set_limit(limit):
     return limit
 
 
-def reset():
+def reset(*args, **kwargs):
     global connections
     global producers
     for pool in _all_pools():
