@@ -98,7 +98,7 @@ def reset(*args, **kwargs):
         except Exception:
             pass
     connections = _Connections()
-    producers._Producers()
+    producers = _Producers()
 
 
 try:
