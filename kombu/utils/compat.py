@@ -1,5 +1,30 @@
 import sys
 
+if sys.version_info >= (3, 0):
+
+    def str_to_bytes(s):
+        if isinstance(s, str):
+            return s.encode()
+        return s
+
+    def bytes_to_str(s):
+        if isinstance(s, bytes):
+            return s.decode()
+        return s
+
+    def from_utf8(s, *args, **kwargs):
+        return s
+
+else:
+    def str_to_bytes(s):                # noqa
+        return s
+
+    def bytes_to_str(s):                # noqa
+        return s
+
+    def from_utf8(s, *args, **kwargs):  # noqa
+        return s.encode("utf-8", *args, **kwargs)
+
 ############## __builtin__.all ##############################################
 
 try:
