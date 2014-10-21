@@ -152,7 +152,7 @@ Then the module ``my_module.serializer`` would look like:
 
 .. code-block:: python
 
-    register_args = (my_decoder, my_encoder, 'application/x-mimetype', 'utf-8')
+    register_args = (my_encoder, my_decoder, 'application/x-mimetype', 'utf-8')
 
 
 When this package is installed the new 'my_serializer' serializer will be
